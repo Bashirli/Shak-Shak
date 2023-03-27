@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="comData"
+            type="com.bashirli.saksak.model.CommentModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="#F8F8F8"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    tools:text="asd"
+                    android:id="@+id/header"
+                    android:text="@{comData.header}"
+                    android:fontFamily="@font/inter_bold"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:layout_width="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    tools:text="asd"
+                    android:textColor="@color/black"
+                    android:id="@+id/mainText"
+                    android:text="@{comData.mainText}"
+                    android:layout_margin="1dp"
+                    android:fontFamily="@font/inter"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+
+                </TextView>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_height="wrap_content">
+                   <TextView
+
+                       android:layout_width="wrap_content"
+                       android:layout_weight="1"
+                       android:text="@{comData.date}"
+                       android:layout_gravity="bottom"
+                       android:layout_height="wrap_content">
+
+                   </TextView>
+
+                   <RatingBar
+                       android:progressTint="@color/black"
+                       android:id="@+id/ratingBar"
+
+                       android:rating="@{Float.parseFloat(comData.rating)}"
+                       style="?android:attr/ratingBarStyleIndicator"
+                       android:numStars="5"
+                      android:layout_gravity="end|center"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                   </RatingBar>
+
+               </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

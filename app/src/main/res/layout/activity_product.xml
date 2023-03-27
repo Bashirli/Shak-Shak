@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ProductActivity">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@drawable/button_anim"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gobackico">
+
+                </ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <com.denzcoskun.imageslider.ImageSlider
+                            android:id="@+id/imageLoad"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:elevation="5dp"
+                            android:transitionName="image"
+                            app:iss_auto_cycle="false"
+                            app:iss_selected_dot="@drawable/selecteddot"
+                            app:iss_unselected_dot="@drawable/unselecteddot"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"></com.denzcoskun.imageslider.ImageSlider>
+
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="290dp"
+                            android:background="@drawable/whitesquare2cornercircle"
+                            android:elevation="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:id="@+id/linearLayout2"
+                                    android:layout_width="250dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="20dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                        <TextView
+                                            android:id="@+id/productTitle"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/inter_bold"
+                                            android:textColor="@color/black"
+                                            android:textSize="25dp"
+                                            android:textStyle="bold"></TextView>
+
+                                        <TextView
+                                            android:id="@+id/productDetail"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="@font/inter"
+
+                                            android:textColor="@color/black"
+                                            android:textSize="15dp">
+
+
+                                        </TextView>
+
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/addFav"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="20dp"
+                                    app:cardBackgroundColor="@drawable/fav_button_anim"
+                                    app:cardCornerRadius="50dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.527"
+                                    app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imageOfFav"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/heartico">
+
+                                        </ImageView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@drawable/line"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+
+                                </ImageView>
+
+                                <LinearLayout
+                                    android:id="@+id/linearLayout4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="20dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/inter_bold"
+                                            android:text="@string/about"
+                                            android:textColor="@color/black"
+                                            android:textSize="35dp">
+
+                                        </TextView>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginTop="15dp"
+                                                    android:layout_weight="1.5"
+                                                    android:orientation="vertical">
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:fontFamily="@font/inter"
+
+                                                            android:text="@string/brand"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp"
+                                                            android:textStyle="bold">
+
+                                                        </TextView>
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="8dp"
+                                                            android:fontFamily="@font/inter"
+                                                            android:text="@string/itemForm"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp"
+                                                            android:textStyle="bold">
+
+                                                        </TextView>
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="8dp"
+                                                            android:fontFamily="@font/inter"
+                                                            android:text="@string/itemVolume"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp"
+                                                            android:textStyle="bold">
+
+                                                        </TextView>
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="8dp"
+                                                            android:fontFamily="@font/inter"
+                                                            android:text="@string/scent"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp"
+                                                            android:textStyle="bold">
+
+                                                        </TextView>
+
+                                                        <TextView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+
+                                                            android:layout_marginTop="8dp"
+                                                            android:fontFamily="@font/inter"
+                                                            android:text="@string/specialFeature"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp"
+                                                            android:textStyle="bold">
+
+                                                        </TextView>
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginTop="15dp"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical">
+
+                                                        <TextView
+                                                            android:id="@+id/brandText"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+
+                                                            android:fontFamily="@font/inter"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp">
+
+                                                        </TextView>
+
+                                                        <TextView
+                                                            android:id="@+id/itemForm"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="8dp"
+
+                                                            android:fontFamily="@font/inter"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp">
+
+                                                        </TextView>
+
+                                                        <TextView
+                                                            android:id="@+id/itemVolume"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="8dp"
+                                                            android:fontFamily="@font/inter"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp">
+
+                                                        </TextView>
+
+                                                        <TextView
+                                                            android:id="@+id/scent"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="8dp"
+                                                            android:fontFamily="@font/inter"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp">
+
+                                                        </TextView>
+
+                                                        <TextView
+                                                            android:id="@+id/specialFeature"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="8dp"
+                                                            android:fontFamily="@font/inter"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="17dp">
+
+                                                        </TextView>
+                                                </LinearLayout>
+                                        </LinearLayout>
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/imageView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@drawable/line"
+                                    app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                                </ImageView>
+
+                                <LinearLayout
+                                    android:id="@+id/linearLayout5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:layout_marginBottom="10dp"
+                                            android:fontFamily="@font/inter_bold"
+                                            android:text="@string/productFeatures"
+                                            android:textColor="@color/black"
+                                            android:textSize="30dp"
+                                            android:textStyle="bold">
+
+                                        </TextView>
+
+                                        <TextView
+                                            android:id="@+id/productInfo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:drawableStart="@drawable/yellowcircle"
+                                            android:drawablePadding="6dp"
+                                            android:fontFamily="@font/inter"
+                                            android:textColor="@color/black"
+                                            android:textSize="15dp">
+
+                                        </TextView>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/costumerReviews"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:src="@drawable/line">
+
+                                        </ImageView>
+
+                                        <LinearLayout
+                                            android:id="@+id/commentReviews"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="20"
+                                                    android:fontFamily="@font/inter_bold"
+                                                    android:text="@string/customerReviews"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="30dp"
+                                                    android:textStyle="bold">
+
+                                                </TextView>
+
+                                                <ImageView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:id="@+id/commentIco"
+                                                    android:layout_weight="5"
+                                                    android:scaleType="fitCenter"
+                                                    android:src="@drawable/closearrow">
+
+                                                </ImageView>
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:src="@drawable/line">
+
+                                        </ImageView>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:orientation="vertical"
+                                            android:visibility="gone"
+                                            android:id="@+id/commentSection"
+                                            android:layout_height="wrap_content">
+                                                <Button
+                                                    android:padding="10dp"
+                                                    android:id="@+id/addComment"
+                                                    style="@style/Widget.Material3.Button.ElevatedButton"
+                                                    android:backgroundTint="@drawable/accbutton"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_margin="15dp"
+                                                    android:layout_gravity="center"
+                                                    android:gravity="center"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="17sp"
+                                                    android:fontFamily="@font/inter_bold"
+                                                    android:text="@string/addCom"
+                                                    android:layout_height="wrap_content">
+
+                                                </Button>
+                                                <com.google.android.material.progressindicator.LinearProgressIndicator
+                                                    android:layout_width="match_parent"
+                                                    android:id="@+id/progressIndicator"
+                                                    android:layout_margin="3dp"
+                                                    android:indeterminate="true"
+                                                    app:indicatorDirectionLinear="startToEnd"
+                                                    android:layout_height="wrap_content">
+
+                                                </com.google.android.material.progressindicator.LinearProgressIndicator>
+
+                                                <androidx.recyclerview.widget.RecyclerView
+                                                    android:layout_width="match_parent"
+                                                    android:id="@+id/recyclerComment"
+                                                    android:layout_margin="1dp"
+                                                    android:layout_height="wrap_content">
+
+
+
+                                                </androidx.recyclerview.widget.RecyclerView>
+
+                                        </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar"
+                                    style="?android:attr/progressBarStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:visibility="gone"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/costumerReviews" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:elevation="20dp"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/priceOfItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#FEFEFE"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+
+
+                </TextView>
+
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

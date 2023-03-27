@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:fillViewport="true"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:hint="@string/header"
+        app:counterMaxLength="40"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/header"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_bold"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="8dp"
+        app:boxStrokeColor="@color/black"
+        android:layout_width="match_parent"
+        android:hint="@string/mainText"
+        app:counterMaxLength="150"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:boxStrokeWidth="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/mainText"
+
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_bold"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:progressTint="@color/black"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+
+    </RatingBar>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="@string/Post"
+            android:id="@+id/postButton"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:backgroundTint="@drawable/accbutton"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:textSize="17sp"
+            android:fontFamily="@font/inter_bold"
+            android:layout_height="wrap_content">
+
+        </Button>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
